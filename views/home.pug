@@ -1,0 +1,40 @@
+extends layout
+
+mixin message(opp, name)
+  if(opp)
+    h1.greeting Logged in as 
+      span=name 
+  else 
+    h1.greeting Welcome 
+      span=name 
+        | to our website
+
+
+append links 
+  li(style="float: right;")
+    a(href="/loggout") Loggout 
+
+block content
+  .dashboard
+    .user
+      +message(opp, name)
+
+block content
+  .post
+    include addPost
+
+mixin text(bud,dy)
+  if(bud)
+    h1.displayPost Listing the posts
+      p=bud 
+      p=dy 
+
+  else 
+    h1.displayPost Your posts
+      p=bud 
+      p=dy 
+        | on the website
+block content
+  .dashboard
+    .user
+      +text(bud, dy)

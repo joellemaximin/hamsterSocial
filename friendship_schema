@@ -1,0 +1,27 @@
+users
+  id: primary key
+  username: string
+
+posts:
+  id: primary key
+  title: string
+  body: string
+  cached_likes_count: int
+
+
+friendships:
+  id: primary key (int)
+  friend_id: int
+  friended_id: int
+
+(1, 2)
+(1, 3)
+
+select count(*) from friendships where (friend_id = 1 and friended_id = 2) OR  (friend_id = 2 and friended_id = 1) ;
+
+likes:
+  id: primary key (int)
+  user_id: int
+  post_id: int
+  direction: int (1 / -1)
+

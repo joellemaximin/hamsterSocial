@@ -1,0 +1,26 @@
+{
+  "name": "hamster",
+  "version": "1.0.0",
+  "description": "create a simple prototype of blogging backend service.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "joelle",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.1",
+    "mysql": "^2.17.1",
+    "pug": "^2.0.4",
+    "router": "^1.3.3",
+    "session": "^0.1.0",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
